@@ -1,0 +1,12 @@
+<h1>Home</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+    <% if post["type"] == "video" %>
+      <li>
+        <%= post["from"]["name"] %>: <%= post["message"] %>
+        <%= link_to "Click to Watch", post["link"] %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
